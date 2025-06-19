@@ -1,0 +1,181 @@
+class-1
+object-1
+static block-2
+
+constructor : initialization of object via calling default constructor to create objects
+
+conditional statements:it will check condition and its will print the block or output in constant time 
+if else while do elseif elif
+
+example: recursive programs(fibonacci series)
+(hcf code)
+public class HCF {
+    public static int findHCF(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+
+    public static int findHCF(int a, int b, int c) {
+        return findHCF(findHCF(a, b), c);
+    }
+
+    
+    public static int findHCF(int a, int b, int c, int d) {
+         return findHCF(findHCF(a, b), findHCF(c, d));
+    }
+
+    public static void main(String[] args) {
+        
+        int num1 = 12, num2 = 18;
+        System.out.println("HCF of " + num1 + " and " + num2 + " is: " + findHCF(num1, num2));
+
+        int num3 = 24, num4 = 36, num5 = 48;
+        System.out.println("HCF of " + num3 + ", " + num4 + " and " + num5 + " is: " + findHCF(num3, num4, num5));
+
+        int num6 = 15, num7 = 30, num8 = 45, num9 = 60;
+        System.out.println("HCF of " + num6 + ", " + num7 + ", " + num8 + " and " + num9 + " is: " + findHCF(num6, num7, num8, num9));
+    }
+}
+--------------------------------------------------------------------------------------
+class demo{
+    int hcf(int a,int b){
+        if(b==0){
+            return a;
+        
+        }else{
+            return hcf(b,a%b);
+        }
+    }
+}
+class Main{
+    public static void main(String args[]){
+        demo obj = new demo();
+        int res=obj.hcf(18,12);
+        System.out.println(res);
+    }
+}
+-----------------------------------------------------------------------------------
+looping statements
+
+for(start;end;diff);{(when knowing range)
+//cod...
+}
+
+entry control loops
+-do while loop
+{(when range is unknown)
+}
+
+--------code write nth table-------------
+import java.util.Scanner;
+
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number for the multiplication table: ");
+        int n = scanner.nextInt();
+        
+        System.out.println("Multiplication table for " + n + ":");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(n + " x " + i + " = " + (n * i));
+        }
+        scanner.close();
+    }
+}
+-------------------------------factorial using loops---------------
+public class Factorial {
+
+    public static void main(String[] args) {
+        int number = 5; // Change this to the desired number
+        long factorialFor = 1;
+        long factorialWhile = 1;
+
+        // Calculate factorial using a for loop
+        for (int i = 1; i <= number; i++) {
+            factorialFor *= i;
+        }
+        System.out.println("Factorial using for loop: " + factorialFor);
+
+        // Calculate factorial using a while loop
+        int i = 1;
+        while (i <= number) {
+            factorialWhile *= i;
+            i++;
+        }
+         System.out.println("Factorial using while loop: " + factorialWhile);
+    }
+}
+-----------------------------------------------fibonacci series using loops----------------------------------
+class Main {
+  public static void main(String[] args) {
+
+    int n = 10, firstTerm = 0, secondTerm = 1;
+    System.out.println("Fibonacci Series till " + n + " terms:");
+
+    for (int i = 1; i <= n; ++i) {
+      System.out.print(firstTerm + ", ");
+
+      
+      int nextTerm = firstTerm + secondTerm;
+      firstTerm = secondTerm;
+      secondTerm = nextTerm;
+    }
+  }
+}
+
+
+
+
+---------------------------------------------------s
+
+class Main {
+  public static void main(String[] args) {
+
+    int n = 11, a = 0, b = 1;
+ 
+    for (int i = 1; i <= n; i++) {
+      int c = a + b;
+      System.out.print(a+",");
+      a = b;
+      b = c;
+    }
+  }
+}--------------------
+---------------------------reverse the given input number------------------------------------
+public class Solution {
+
+    public int reverseNumber(int num) {
+        int reversedNum = 0;
+        while (num != 0) {
+            int digit = num % 10;
+            reversedNum = reversedNum * 10 + digit;
+            num /= 10;
+        }
+        return reversedNum;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        int num = 12346789;
+        int reversed = solution.reverseNumber(num);
+        System.out.println("Reversed number: " + reversed); 
+    }
+}
+------------------------------------** shape printing**---------------
+public class Z {
+    public static void main(String[] args) {
+        int s= 5; 
+        for (int i = 0; i < s; i++) {
+            for (int j = 0; j < s; j++)
+                System.out.print((i == 0 || i == s - 1 || i + j == s - 1) ? " *" : "  ");
+            System.out.println();
+        }
+    }
+}
+
+

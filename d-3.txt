@@ -1,0 +1,71 @@
+nested loops 
+loop within a loop is known as nested loop 
+
+
+print number of rows----------------------
+print number of columns--------------------
+print what to print and what not to print--------------
+
+public class Main {
+    public static boolean isPrime(int n) {
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0) {
+                return false;  
+            }
+        }
+
+        return true;  
+    }
+
+    public static void main(String[] args) {
+        int num = 9;  
+        
+        if (isPrime(num)) {
+            System.out.println(num + " is a prime number.");
+        } else {
+            System.out.println(num + " is not a prime number.");
+        }
+    }
+}
+-------------------------------------------password-----------
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int c=1234;
+        int u;
+        do{
+            System.out.println("Enter our pin");
+            u=sc.nextInt();
+            if(u != c){
+                System.out.println("Tncorrect pin. Tr again");
+            }
+        }while( u!=c);
+        System.out.println("pin verified acess granted");
+        sc.close();
+    }
+}
+---------------------------------------------------------------amount withdrawel--------
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int choice;
+        do{
+            System.out.println("\n1. check balance");
+            System.out.println("2. Withdraw amount");
+            System.out.println("3.. deposit");
+            System.out.println("4. exit");
+            System.out.println("choose an option");
+            choice = sc.nextInt();
+            
+            
+            switch(choice){
+                case 1 -> System.out.println("balance: $2000");
+                default -> System.out.println("invalid option tr again");
+            }
+        }while(choice !=4);
+    }
+}
