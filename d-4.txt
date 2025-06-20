@@ -1,0 +1,174 @@
+switch case
+cases have to be the same tpe as expresions,must be a constant or litera
+-duplicate case value not allowed
+-break is use to terminate the sequence 
+-if break is not used, it will continue to next case
+-default will execute when none of the above does
+-if default is not at the end,put break after it
+
+sntax-----------------------------------
+class Main {
+    public static void main(String[] args) {
+       switch(expression){
+           case:
+               statement:
+               break:
+            default:
+            statement:
+}
+}
+}
+
+enhanced switch case code---------------------
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new scanner(System.in);
+       switch(n){
+           case 1 -> System.out.println("monday");
+           case 2 -> System.out.println("monday");
+           case 3 -> System.out.println("monday");
+           case 4 -> System.out.println("monday");
+           case 5 -> System.out.println("monday");
+           case 6 -> System.out.println("monday");
+           case 7 -> System.out.println("monday");
+           default ->System.out.println("enter a num from 1 -7");
+
+sum od digit till we get a single digit-------------------------------------
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int n =12353684;
+        while(n>9){
+            int sum=0;
+        while(n!=0){
+            int r =n % 10;
+            sum=sum + r;
+            n=n / 10;
+        }
+         n=sum;
+        }
+         System.out.println(n);
+    }
+right angl triangle star-------------------------------
+class Main {
+    public static void main(String[] args) {
+        for(int i=1;5>=i;i++){
+            for(int j=1;i>=j;j++){
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+      
+    }
+}
+------------------------------------------
+class Main {
+    public static void main(String[] args) {
+        for(int i=1;5>=i;i++){
+            for(int j=1;(2*i-1)>=j;j++){
+                System.out.print(j);
+            }
+            System.out.println(" ");
+        }
+      
+    }
+}
+---------------------------------------------------------------
+ternari operators:
+class Main {
+    public static void main(String[] args) {
+      /*  int n = 5;
+        if(n==5){
+            System.out.print("yes");
+            }else{
+                System.out.println("no");
+            }
+           (condition)?statement1:statement2: -->Syntax*/
+            for
+            String res =(n==5)? "yes":"no";
+            System.out.println(res);
+        
+    }
+}
+ 
+for each loopp-------------------
+whenever we don't have length and whenever we don't have index values we use each loop .
+mostli we use for each loop in collections 
+example:list set and map
+int[] numbers = {1, 2, 3, 4, 5};
+for (int number : numbers) {
+    System.out.println(number);
+}----------------------------------------------------------
+
+class PyramidPattern{
+  public static void main(String[] args) {
+    int n=5;
+    for(int i=1;i<=n;i++)
+    {
+      for(int j=1;j<=n-i;j++)
+      {
+        System.out.print("   ");
+      }
+      for(int j=1;j<=(2*i-1);j++)
+      {
+        System.out.print(" * ");
+      }
+      System.out.println();
+    }
+}
+}
+-----------------------------------------------------------------------------------------------
+class PyramidPattern{
+  public static void main(String[] args) {
+    int n=5;
+    for(int i=1;i<=n;i++)
+    {
+      for(int j=1;j<=n-i;j++)
+      {
+        System.out.print("   ");
+      }
+      for(int j=1;j<=(2*i-1);j++)
+      {
+        System.out.print(" * ");
+      }
+      System.out.println();
+    }
+}
+}
+------------------------------------------------------------------
+class Diamond{
+  public static void main(String[] args) {
+    int n=5;
+    for(int i=1;i<=n;i++)
+    {
+      for(int j=1;j<=n-i;j++)
+      {
+        System.out.print("   ");
+      }
+      for(int j=1;j<=(2*i-1);j++)
+      {
+        System.out.print(" * ");
+      }
+      System.out.println();
+    }
+
+    for(int i=n-1;i>=1;i--)
+    {
+      for(int j=1;j<=n-i;j++)
+      {
+        System.out.print("   ");
+      }
+      for(int j=1;j<=(2*i-1);j++)
+      {
+        System.out.print(" * ");
+      }
+      System.out.println();
+    }
+
+}
+}
+---------------------------------------------------------------------------------------------------------------
+hour glass - inverted hour glass or bow
+

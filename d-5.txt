@@ -1,0 +1,200 @@
+arra
+defination- all the variable name 
+all the values assigned to those variables will be stored in heap memory
+here all the blocks having same data tipe. if all the blocks having same datatipe whi to create different variable so we use array 
+collection off similar type of data in a continues allocation....
+example if variable of an array[5.6.7]
+if 5 is stored at address 100 then next value(6) of the array should be allocated at 104(int 4 bite) and the 3rd value(7) be stored at 108
+
+syntax- data type[] array name;
+declairation and initialization in same line
+int[] numbers = {1, 2, 3, 4, 5};
+
+if ou want to get the data previously all the data in individual variables and if ou want to get the data we can simply print the variable and in array we have to print the data using index value
+ index value by default start with 0
+
+
+class Main {
+    public static void main(String[] args) {
+        int[] arr ={1,2,3,4,5};//declaration
+        int [] arr; //initialization
+        System.out.println(arr[0]);
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        int[] arr ={1,2,3,4,5};//declaration
+        for (int i=0;i< arr.length;i++){
+            System.out.println(arr[i]);
+        }
+    }
+}
+
+to get the size  of arra we have to use array.length;
+to get the length of string we have to use str.length();
+
+tpes of output format
+we can use simple for  loop 
+and second we can use for each loop
+
+> tostring is an inbuilt method to print arrai values
+>internall tostring contains for loop and it will print along withopen and close square brackets followed b comma exp[1,2,3,]
+
+camel case and snake case:
+xample---------
+class Main {
+    public static void main(String[] args) {
+        int[] arr ={1,2,3,4,5};//declaration
+        int oddCount;
+        void addTwoValues(){
+        }
+            S
+class Main {
+    public static void main(String[] args) {
+        int[] arr ={1,2,3,4,5};//declaration
+        int oddCount;
+        void addTwoValues(){
+        }
+            System.out.println(array.toString(arr));
+       
+    }
+}stem.out.println(array.toString(arr));
+       
+    }
+}
+
+in a given array get count of odd and even numbers
+class Main {
+    public static void main(String[] args) {
+        int[] arr ={1,2,3,4,5};//declaration
+        int oddCount=0;
+        int evenCount=0;
+        for(int i=0;arr.length>i;i++){
+            if(arr[i]%2==0){
+                evenCount++;
+            }else{
+                oddCount++;
+            }
+        }
+            System.out.println(evenCount + oddCount);
+       
+    }
+}//5
+ heighest number in an array----------------------------
+class Main {
+    public static void main(String[] args) {
+        int[] arr ={1,2,3,5,5};
+        int greatestNumber=arr[0];
+        
+        
+        for (int i = 1; i < arr.length; i++){
+            if (arr[i] > greatestNumber){
+                greatestNumber = arr[i]; 
+            
+            }
+        }
+        
+        System.out.println(greatestNumber);
+    }
+}
+----------------------------------------------second heighest value
+class Main {
+    public static void main(String[] args) {
+        int[] arr ={1,2,3,5,5};
+        int greatestNumber=arr[0];
+         int secondgreatestNumber=arr[0];
+        
+        
+        for (int i = 1; i < arr.length; i++){
+            if (arr[i] > greatestNumber){
+                greatestNumber = arr[i]; 
+            
+            }
+        }
+        for (int i = 1; i < arr.length; i++){
+            if (arr[i] > secondgreatestNumber  && arr[i]!=greatestNumber){
+                secondgreatestNumber = arr[i]; 
+            
+            }
+        }
+        
+        System.out.println(secondgreatestNumber);
+    }
+}---------------------------------------------------------------------
+second largest
+class Main {
+    public static void main(String[] args) {
+        int[] arr ={1,2,3,5,5};
+        int greatestNumber=arr[0];
+         int secondgreatestNumber=arr[0];
+        
+        
+        for (int i = 1; i < arr.length; i++){
+            if (arr[i] > greatestNumber){
+                secondgreatestNumber =  greatestNumber;
+                 greatestNumber=arr[i];
+            }else if(arr[i] > secondgreatestNumber  && arr[i]!=greatestNumber){
+                secondgreatestNumber = arr[i];
+            }
+        }
+        System.out.println(secondgreatestNumber);
+    }
+}
+--------initialization and declairation of array with size------------
+once you created an array along with size it can't be modified because the size will be fixed and int array will be created in stack memor and will call it as a reference and new kwword helps to create object space
+
+if the array type is int by default all the values will be zero and if type is string then the default value will be NULL
+class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+    }
+}
+whenever we are tring to assign or print nth index we will get error of exceptions
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        int[] arr = new int[5];
+         for (int i = 1; i < arr.length; i++){
+             System.out.print("enter the values");
+             arr[i]= in.nextInt();
+         }
+         
+         for (int i = 1; i < arr.length; i++){
+             System.out.println(arr[i]);
+         }
+         
+    }
+}
+
+--------------------------premetive and non premetive datatypes----------
+premetive data types can't be dividd or splitted(ex-int.float&char)
+non premetive datatypes acn be splitted or divided(example-strings&all user defined objects)
+(non premitive code)
+class Node{
+    int data;
+    Node next;
+}
+----------------------------------------------------------------------------arra sorted or not 
+import java.util.*;
+class Main {
+    static String checkSort(int[] arr) {
+        int flag=0;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > arr[i+1]) {
+                flag=1;
+            }
+        }
+        if(flag==0){
+            return "sorted";
+        }else{
+            return "unsorted";
+        }
+    }
+    public static void main(String[] args) {
+        int[] arr ={1,2,3,5,5};
+        System.out.println(checkSort(arr));
+    }
+}
