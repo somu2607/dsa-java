@@ -1,0 +1,3 @@
+2d arra consists of rows and columns:
+int [][] arr= new int[3][];
+while declairing th arraie we have to give number of rows to mention number of colums is optional
