@@ -1,0 +1,14 @@
+recursion:
+     recursions are nothing but function calling itself till it meets the base condition
+tipes:
+function calling same function itself and itself 
+function calling another function itself and itself
+in java we don't have pointers we can't use reference .so java is strictli passed bi value 
+if we didn't mention base case properli we gat an exception of stack overflow
+
+write code for factorial using recursion
+
+recursion tree 
+5!=5*4!
+4!=4*3!
+3!=3*2!

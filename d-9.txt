@@ -1,0 +1,60 @@
+string
+collection of characters is called strings
+
+int[] n={}
+
+similarl to store multiple chatacters
+
+when ou created a string reference will be stored in stack memor object will be created in string pool once a object created in string pool it will be created with some fixed size so we can't remove or add or alter the string that's wh strings are immutable
+recursive calls
+
+""       ------>
+"h"      ------>
+'hl"      ------>
+"hll"    ------> 
+"hllo"  ------>
+
+whenever input string becomes empt we have to stop recursion it's called base as well 
+String s = "asdfghjkl";
+char c = s.charAt(3);  // Gets the character at index 3, which is 'd'
+System.out.println(c);  // Output: d
+
+String substring(int beginIndex)
+String substring(int beginIndex, int endIndex)
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "asdfghjkl";
+        int g = 4;
+        for (int i = 0; i < s.length(); i++) {
+            if (i != g) {
+                System.out.print(s.charAt(i)); 
+            }
+        }
+        System.out.println();
+    }
+}
+
+-------------------------------------------------
+class Main {
+    static String skip(String str){
+        if(str.isEmpty()){
+            return "";
+        }
+        char ch=str.charAt(0);
+        if(ch=='h'){
+            return skip(str.substring(1));
+        }else{
+            return ch + skip(str.substring(1));
+        }
+    }
+    public static void main(String[] args) {
+        String s = "asdfghellojkl";
+        String str= skip(s);
+        System.out.print(str); 
+    }
+}
+
+subset =for a given aara we will get 2^n subsets
+subset should be in a sequence and not in continues
+
